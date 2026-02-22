@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block header %}
+   {{ super() }}
+
+  <div class="win95-menubar-wrap">
+    <nav class="win95-menubar" aria-label="Menu">
+  <a href="{{ nav.homepage.url | url }}">Home</a>
+  <span class="sep" aria-hidden="true"></span>
+  <a href="{{ 'search/' | url }}">Search</a>
+
+  <span class="sep" aria-hidden="true"></span>
+
+  <!-- Skin toggle -->
+  <span class="menu-label">Theme:</span>
+  <button class="skin-btn skin-btn-start" type="button" onclick="setArchiveSkin('win95')">Win95</button>
+  <button class="skin-btn" type="button" onclick="setArchiveSkin('xpvista')">XP/Vista</button> <span id="skin-label" class="menu-status">Windows 95</span>
+  <span style="margin-left:auto; opacity:.8;">{{ config.site_name }}</span>
+
+</nav>
+</div>
+
+{% endblock %}

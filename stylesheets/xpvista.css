@@ -1,0 +1,458 @@
+/* ==========================================
+   XP / Vista-ish “glass” skin
+   File: docs/stylesheets/xpvista.css
+   Activated by: body.skin-xpvista
+   ========================================== */
+
+body.skin-xpvista {
+  /* Wallpaper-ish background */
+  background: radial-gradient(circle at 20% 20%, #7fd3ff 0%, #2a6bd8 35%, #0b2a66 100%) !important;
+}
+
+/* Softly round things up */
+body.skin-xpvista .md-content__inner,
+body.skin-xpvista .md-sidebar__scrollwrap,
+body.skin-xpvista .win95-menubar {
+  border-radius: 14px !important;
+}
+
+/* “Glass” panels */
+body.skin-xpvista .md-sidebar__scrollwrap,
+body.skin-xpvista .md-content__inner {
+  background: rgba(255, 255, 255, 0.55) !important;
+  border: 1px solid rgba(255,255,255,0.45) !important;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.5) !important;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+/* Title bar -> glossy */
+body.skin-xpvista .md-header {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.35), rgba(20,90,200,0.85)) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.25) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25) !important;
+}
+
+body.skin-xpvista .md-header__title,
+body.skin-xpvista .md-header__button,
+body.skin-xpvista .md-header__topic,
+body.skin-xpvista .md-header__source {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+}
+
+/* Menu bar -> bubble glass */
+body.skin-xpvista .win95-menubar {
+  background: rgba(255,255,255,0.35) !important;
+  border: 1px solid rgba(255,255,255,0.35) !important;
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.6) !important;
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+}
+
+body.skin-xpvista .win95-menubar a,
+body.skin-xpvista .win95-menubar button {
+  color: #0b1b3a !important;
+  text-shadow: none;
+  border-radius: 10px !important;
+  padding: 4px 10px !important;
+}
+
+body.skin-xpvista .win95-menubar a:hover,
+body.skin-xpvista .win95-menubar button:hover {
+  background: rgba(255,255,255,0.35) !important;
+  border: 1px solid rgba(255,255,255,0.45) !important;
+}
+
+/* Search box -> glossy input */
+body.skin-xpvista .md-search__input {
+  border-radius: 999px !important;
+  background: rgba(255,255,255,0.75) !important;
+  border: 1px solid rgba(255,255,255,0.5) !important;
+  box-shadow:
+    inset 0 1px 2px rgba(0,0,0,0.12),
+    0 6px 14px rgba(0,0,0,0.12) !important;
+}
+
+/* Sidebar selection highlight -> XP-ish */
+body.skin-xpvista .md-nav__link--active,
+body.skin-xpvista .md-nav__item .md-nav__link--active {
+  background: rgba(0, 120, 255, 0.25) !important;
+  color: #0b1b3a !important;
+  border-radius: 10px !important;
+}
+
+/* Links */
+body.skin-xpvista .md-typeset a {
+  color: #0b3aa8 !important;
+}
+body.skin-xpvista .md-typeset a:visited {
+  color: #5a2ea6 !important;
+}
+
+/* Make text readable on glass */
+body.skin-xpvista .md-typeset,
+body.skin-xpvista .md-nav__title,
+body.skin-xpvista .md-nav__link {
+  color: #0b1b3a !important;
+}
+
+/* ==========================================
+   XP/Vista extras: Start button + glass separators
+   Applies only when body.skin-xpvista is set
+   ========================================== */
+
+/* Make separators look like glossy “glass” */
+body.skin-xpvista .win95-menubar .sep {
+  width: 2px;
+  height: 18px;
+  margin: 0 6px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.65),
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.55)
+  ) !important;
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.5);
+  opacity: 0.9;
+}
+
+/* Theme label + status */
+body.skin-xpvista .win95-menubar .menu-label {
+  color: rgba(11,27,58,0.8);
+  margin-left: 6px;
+}
+
+body.skin-xpvista .win95-menubar .menu-status {
+  margin-left: 6px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  color: rgba(11,27,58,0.85);
+}
+
+/* Base styling for skin buttons in XP/Vista mode */
+body.skin-xpvista .win95-menubar .skin-btn {
+  border-radius: 999px !important;
+  padding: 5px 12px !important;
+  border: 1px solid rgba(255,255,255,0.45) !important;
+  background: rgba(255,255,255,0.22) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.6),
+    0 8px 16px rgba(0,0,0,0.18) !important;
+  color: #0b1b3a !important;
+}
+
+/* Hover */
+body.skin-xpvista .win95-menubar .skin-btn:hover {
+  background: rgba(255,255,255,0.32) !important;
+  border-color: rgba(255,255,255,0.6) !important;
+}
+
+/* “Pressed” */
+body.skin-xpvista .win95-menubar .skin-btn:active {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 2px 4px rgba(0,0,0,0.12),
+    0 6px 12px rgba(0,0,0,0.14) !important;
+}
+
+/* The Start button look */
+body.skin-xpvista .win95-menubar .skin-btn-start {
+  position: relative;
+  padding-left: 36px !important; /* room for orb */
+  font-weight: 700;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.35) !important;
+
+  /* XP/Vista start-ish gradient */
+  background: linear-gradient(to bottom, rgba(60,200,90,0.95), rgba(20,120,60,0.95)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.65),
+    0 10px 18px rgba(0,0,0,0.22) !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+}
+
+/* Orb icon */
+body.skin-xpvista .win95-menubar .skin-btn-start::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+
+  /* Vista-ish orb highlight */
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #8fe3ff 18%, #1d7bff 55%, #0b2a66 100%);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.55);
+}
+
+/* Optional: make “Win95” button look selected when in Win95 mode,
+   and “XP/Vista” button look selected when in XP/Vista mode. */
+body.skin-xpvista .win95-menubar .skin-btn:not(.skin-btn-start) {
+  /* gently “on” look for the XP/Vista button */
+  background: rgba(0,120,255,0.22) !important;
+  border-color: rgba(255,255,255,0.55) !important;
+}
+
+/* ==========================================
+   XP/Vista content spacing + typography polish
+   ========================================== */
+
+/* Add more breathing room inside glass panel */
+body.skin-xpvista .md-content__inner {
+  padding: 2.5rem 3rem 3rem !important;
+}
+
+/* Reduce overall text size slightly */
+body.skin-xpvista .md-typeset {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+}
+
+/* Constrain readable width */
+body.skin-xpvista .md-typeset {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Headings a little more proportional */
+body.skin-xpvista .md-typeset h1 {
+  font-size: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+body.skin-xpvista .md-typeset h2 {
+  font-size: 1.5rem !important;
+  margin-top: 2rem !important;
+}
+
+body.skin-xpvista .md-typeset ul {
+  padding-left: 1.4rem;
+}
+
+/* Admonitions look nicer with spacing */
+body.skin-xpvista .md-typeset .admonition {
+  margin: 1.5rem 0 !important;
+  padding: 1rem 1.25rem !important;
+  border-radius: 12px !important;
+}
+
+/* Right panel gadget + tray (XP/Vista) */
+body.skin-xpvista .archive-rightpanel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+body.skin-xpvista .archive-gadget {
+  background: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.40);
+  border-radius: 16px;
+  padding: 14px 14px 12px;
+  box-shadow:
+    0 12px 26px rgba(0,0,0,0.20),
+    inset 0 1px 0 rgba(255,255,255,0.55);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  color: #0b1b3a;
+}
+
+body.skin-xpvista .archive-gadget__title {
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.55);
+  margin-bottom: 10px;
+}
+
+body.skin-xpvista .archive-gadget__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 2px;
+  border-bottom: 1px solid rgba(255,255,255,0.22);
+}
+
+body.skin-xpvista .archive-gadget__row:last-of-type {
+  border-bottom: none;
+}
+
+body.skin-xpvista .archive-gadget__row .k {
+  opacity: 0.75;
+}
+
+body.skin-xpvista .archive-gadget__row .v {
+  font-weight: 600;
+}
+
+body.skin-xpvista .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+body.skin-xpvista .dot-green {
+  background: #2fd063;
+  box-shadow: 0 0 0 2px rgba(47,208,99,0.18);
+}
+
+body.skin-xpvista .archive-gadget__actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+body.skin-xpvista .archive-btn {
+  flex: 1;
+  border-radius: 999px !important;
+  padding: 8px 12px !important;
+  border: 1px solid rgba(255,255,255,0.45) !important;
+  background: rgba(255,255,255,0.22) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.6),
+    0 10px 18px rgba(0,0,0,0.18) !important;
+  cursor: pointer;
+}
+
+body.skin-xpvista .archive-btn:hover {
+  background: rgba(255,255,255,0.32) !important;
+  border-color: rgba(255,255,255,0.6) !important;
+}
+
+body.skin-xpvista .archive-gadget__hint {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* Fake “system tray” */
+body.skin-xpvista .archive-tray {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow:
+    0 12px 24px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.55);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+}
+
+body.skin-xpvista .tray-item {
+  padding: 4px 6px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.20);
+}
+
+body.skin-xpvista .tray-clock {
+  margin-left: auto;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.20);
+}
+
+/* ==========================================
+   Aero hover glow for tray icons (XP/Vista)
+   ========================================== */
+
+body.skin-xpvista .archive-tray .tray-item,
+body.skin-xpvista .archive-tray .tray-clock {
+  position: relative;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    background 140ms ease,
+    border-color 140ms ease,
+    filter 140ms ease;
+}
+
+/* glossy highlight layer */
+body.skin-xpvista .archive-tray .tray-item::before,
+body.skin-xpvista .archive-tray .tray-clock::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.55),
+    rgba(255,255,255,0.10)
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease;
+}
+
+/* Hover: “Aero glow” */
+body.skin-xpvista .archive-tray .tray-item:hover,
+body.skin-xpvista .archive-tray .tray-clock:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.34);
+  border-color: rgba(180, 225, 255, 0.75);
+  box-shadow:
+    0 10px 22px rgba(0,0,0,0.22),
+    0 0 0 2px rgba(90, 200, 255, 0.18),
+    0 0 18px rgba(80, 190, 255, 0.35),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+  filter: saturate(1.15);
+}
+
+body.skin-xpvista .archive-tray .tray-item:hover::before,
+body.skin-xpvista .archive-tray .tray-clock:hover::before {
+  opacity: 1;
+}
+
+/* Active press: “clicked glass” */
+body.skin-xpvista .archive-tray .tray-item:active,
+body.skin-xpvista .archive-tray .tray-clock:active {
+  transform: translateY(0px);
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.18),
+    inset 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* Optional: tiny “notification shine” pulse on hover */
+@keyframes aeroShine {
+  0%   { opacity: 0; transform: translateX(-6px); }
+  35%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translateX(10px); }
+}
+
+body.skin-xpvista .archive-tray .tray-item:hover::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 6px;
+  width: 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.55);
+  filter: blur(1px);
+  opacity: 0;
+  animation: aeroShine 650ms ease-out 1;
+  pointer-events: none;
+}

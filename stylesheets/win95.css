@@ -1,0 +1,347 @@
+/* ==========================================
+   Windows 95 skin for Material for MkDocs
+   File: docs/stylesheets/win95.css
+   Activated by: body.skin-win95
+   ========================================== */
+
+/* ----- Win95 palette + bevel helpers ----- */
+:root {
+  --win95-face: #c0c0c0;
+  --win95-shadow: #808080;
+  --win95-dark: #000000;
+  --win95-light: #ffffff;
+  --win95-hilite: #dfdfdf;
+
+  --win95-title: #000080;
+  --win95-title-text: #ffffff;
+
+  /* bevel helpers */
+  --bevel-out: 2px solid var(--win95-light);
+  --bevel-out-2: 2px solid var(--win95-shadow);
+  --bevel-in: 2px solid var(--win95-shadow);
+  --bevel-in-2: 2px solid var(--win95-light);
+}
+
+/* Best-effort classic Windows font stack */
+@font-face {
+  font-family: "MS Sans Serif";
+  src: local("MS Sans Serif"), local("Microsoft Sans Serif"), local("Tahoma");
+}
+
+/* ----- Desktop background ----- */
+body.skin-win95 {
+  background: #008080 !important; /* classic teal desktop */
+}
+
+/* ----- Typography (Win95) ----- */
+body.skin-win95,
+body.skin-win95 .md-typeset,
+body.skin-win95 .md-nav,
+body.skin-win95 .md-search__input {
+  font-family: "MS Sans Serif", Tahoma, Verdana, Arial, sans-serif !important;
+  font-size: 14px;
+  color: var(--win95-dark);
+}
+
+/* Keep container transparent so desktop shows */
+body.skin-win95 .md-container {
+  background: transparent !important;
+}
+
+/* ----- Kill Material haze/overlays/gradients/shadows (Win95 mode) ----- */
+body.skin-win95 .md-header,
+body.skin-win95 .md-tabs,
+body.skin-win95 .md-header__inner,
+body.skin-win95 .md-main,
+body.skin-win95 .md-main__inner,
+body.skin-win95 .md-sidebar,
+body.skin-win95 .md-sidebar__inner,
+body.skin-win95 .win95-menubar-wrap,
+body.skin-win95 .win95-menubar {
+  background-image: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+body.skin-win95 .md-header::before,
+body.skin-win95 .md-header::after,
+body.skin-win95 .md-tabs::before,
+body.skin-win95 .md-tabs::after,
+body.skin-win95 .md-header__inner::before,
+body.skin-win95 .md-header__inner::after,
+body.skin-win95 .win95-menubar::before,
+body.skin-win95 .win95-menubar::after {
+  content: none !important;
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+/* ----- Header -> Win95 title bar ----- */
+body.skin-win95 .md-header {
+  background: var(--win95-title) !important;
+  color: var(--win95-title-text) !important;
+  border-bottom: 1px solid var(--win95-dark);
+}
+
+body.skin-win95 .md-header__title,
+body.skin-win95 .md-header__button,
+body.skin-win95 .md-header__topic,
+body.skin-win95 .md-header__source {
+  color: var(--win95-title-text) !important;
+}
+
+/* ----- Tabs (if enabled) -> flat gray strip ----- */
+body.skin-win95 .md-tabs {
+  background: var(--win95-face) !important;
+  border-bottom: 1px solid var(--win95-shadow);
+}
+
+body.skin-win95 .md-tabs__link {
+  color: var(--win95-dark) !important;
+  opacity: 1 !important;
+}
+
+body.skin-win95 .md-tabs__link:hover {
+  background: #b0b0b0 !important;
+}
+
+/* ----- Panels (sidebar + content) -> beveled windows ----- */
+body.skin-win95 .md-sidebar__scrollwrap,
+body.skin-win95 .md-content__inner {
+  background: var(--win95-face) !important;
+  border-top: var(--bevel-out);
+  border-left: var(--bevel-out);
+  border-right: var(--bevel-out-2);
+  border-bottom: var(--bevel-out-2);
+  border-radius: 0 !important;
+}
+
+body.skin-win95 .md-content__inner {
+  padding: 1rem 1rem 2rem !important;
+}
+
+/* ----- Sidebar nav styling ----- */
+body.skin-win95 .md-nav__title,
+body.skin-win95 .md-nav__link {
+  color: var(--win95-dark) !important;
+}
+
+body.skin-win95 .md-nav__link:hover {
+  background: #b0b0b0 !important;
+}
+
+/* Active selection -> classic highlight */
+body.skin-win95 .md-nav__link--active,
+body.skin-win95 .md-nav__item .md-nav__link--active {
+  background: #000080 !important;
+  color: #ffffff !important;
+}
+
+/* ----- Search input -> Win95 textbox ----- */
+body.skin-win95 .md-search__form {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.skin-win95 .md-search__input {
+  background: var(--win95-light) !important;
+  border-top: var(--bevel-in);
+  border-left: var(--bevel-in);
+  border-right: var(--bevel-in-2);
+  border-bottom: var(--bevel-in-2);
+  border-radius: 0 !important;
+  color: var(--win95-dark) !important;
+}
+
+/* ----- Buttons/controls -> classic bevel ----- */
+body.skin-win95 .md-button,
+body.skin-win95 button,
+body.skin-win95 .md-typeset .md-button,
+body.skin-win95 .win95-menubar button {
+  background: var(--win95-face) !important;
+  color: var(--win95-dark) !important;
+  border-top: var(--bevel-out);
+  border-left: var(--bevel-out);
+  border-right: var(--bevel-out-2);
+  border-bottom: var(--bevel-out-2);
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-transform: none !important;
+  font-weight: normal !important;
+}
+
+body.skin-win95 .md-button:active,
+body.skin-win95 button:active,
+body.skin-win95 .md-typeset .md-button:active,
+body.skin-win95 .win95-menubar button:active {
+  border-top: var(--bevel-in);
+  border-left: var(--bevel-in);
+  border-right: var(--bevel-in-2);
+  border-bottom: var(--bevel-in-2);
+}
+
+/* ----- Links -> classic web blue/purple ----- */
+body.skin-win95 .md-typeset a {
+  color: #0000ee !important;
+  text-decoration: underline;
+}
+
+body.skin-win95 .md-typeset a:visited {
+  color: #551a8b !important;
+}
+
+/* ----- Headings -> less modern ----- */
+body.skin-win95 .md-typeset h1,
+body.skin-win95 .md-typeset h2,
+body.skin-win95 .md-typeset h3 {
+  font-weight: normal !important;
+  letter-spacing: 0 !important;
+}
+
+/* ----- Code blocks -> inset editor style ----- */
+body.skin-win95 .md-typeset pre {
+  background: var(--win95-light) !important;
+  border-top: var(--bevel-in);
+  border-left: var(--bevel-in);
+  border-right: var(--bevel-in-2);
+  border-bottom: var(--bevel-in-2);
+  border-radius: 0 !important;
+}
+
+/* ----- Tables -> Win95 list view ----- */
+body.skin-win95 .md-typeset table:not([class]) {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  background: var(--win95-light) !important;
+  border-top: var(--bevel-in);
+  border-left: var(--bevel-in);
+  border-right: var(--bevel-in-2);
+  border-bottom: var(--bevel-in-2);
+}
+
+body.skin-win95 .md-typeset table:not([class]) th,
+body.skin-win95 .md-typeset table:not([class]) td {
+  border: 1px solid #d0d0d0;
+}
+
+/* ----- Admonitions/details -> Win95 group boxes ----- */
+body.skin-win95 .md-typeset .admonition,
+body.skin-win95 .md-typeset details {
+  background: var(--win95-face) !important;
+  border-top: var(--bevel-out);
+  border-left: var(--bevel-out);
+  border-right: var(--bevel-out-2);
+  border-bottom: var(--bevel-out-2);
+  border-radius: 0 !important;
+}
+
+/* ==========================================
+   Faux Win95 menu bar styling (shared markup)
+   ========================================== */
+body.skin-win95 .win95-menubar-wrap {
+  position: sticky;
+  top: 48px; /* header height-ish */
+  z-index: 20;
+}
+
+body.skin-win95 .win95-menubar {
+  background: var(--win95-face) !important;
+  color: var(--win95-dark) !important;
+  border-top: var(--bevel-out);
+  border-left: var(--bevel-out);
+  border-right: var(--bevel-out-2);
+  border-bottom: var(--bevel-out-2);
+  border-radius: 0;
+  margin: 0;
+  padding: 2px 6px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  user-select: none;
+}
+
+body.skin-win95 .win95-menubar a,
+body.skin-win95 .win95-menubar button {
+  font: inherit;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 2px 8px;
+  cursor: default;
+  color: var(--win95-dark);
+  text-decoration: none;
+}
+
+body.skin-win95 .win95-menubar a:hover,
+body.skin-win95 .win95-menubar button:hover {
+  border-top: var(--bevel-out);
+  border-left: var(--bevel-out);
+  border-right: var(--bevel-out-2);
+  border-bottom: var(--bevel-out-2);
+  background: #bfbfbf;
+}
+
+body.skin-win95 .win95-menubar a:active,
+body.skin-win95 .win95-menubar button:active {
+  border-top: var(--bevel-in);
+  border-left: var(--bevel-in);
+  border-right: var(--bevel-in-2);
+  border-bottom: var(--bevel-in-2);
+}
+
+body.skin-win95 .win95-menubar .sep {
+  width: 1px;
+  height: 18px;
+  background: var(--win95-shadow);
+  margin: 0 2px;
+}
+
+/* Optional: box the site on wide screens */
+@media (min-width: 1200px) {
+  body.skin-win95 .md-main__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Right panel gadget + tray (Win95) */
+body.skin-win95 .archive-rightpanel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body.skin-win95 .archive-gadget,
+body.skin-win95 .archive-tray {
+  background: var(--win95-face) !important;
+  border-top: var(--bevel-out);
+  border-left: var(--bevel-out);
+  border-right: var(--bevel-out-2);
+  border-bottom: var(--bevel-out-2);
+  border-radius: 0 !important;
+  padding: 10px;
+  color: var(--win95-dark);
+}
+
+body.skin-win95 .archive-gadget__title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+body.skin-win95 .archive-gadget__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+body.skin-win95 .archive-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+body.skin-win95 .tray-clock {
+  margin-left: auto;
+  font-weight: 700;
+}

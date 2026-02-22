@@ -11,3 +11,13 @@
     height: 800px;
   }
 }
+
+.md-typeset h1 {
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.md-typeset blockquote {
+    font-style: italic;
+    opacity: 0.85;
+}
